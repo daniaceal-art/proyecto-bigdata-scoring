@@ -120,9 +120,6 @@ Automatización del pipeline
 
 Power Bi:
 
-## Dashboard Power BI
-
-![Power BI](Power BI.png)
 
 La tabla Gold se conecta a Power BI para crear dashboards interactivos.
 
@@ -232,6 +229,9 @@ Tabla Gold → gold_scoring_clientes
 El linaje garantiza gobernanza, auditoría y control del ciclo de vida del dato dentro de la arquitectura.
 
 # 6 APP O VISUALIZACIÓN:
+
+![Power BI](Power BI.png)
+
 Visualización:
 
 
