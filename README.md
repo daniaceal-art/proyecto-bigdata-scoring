@@ -230,8 +230,9 @@ El linaje garantiza gobernanza, auditoría y control del ciclo de vida del dato 
 
 # 6 APP O VISUALIZACIÓN:
 
-![Power BI](Power BI.png)
+## Dashboard Power BI
 
+<img src="https://github.com/daniaceal-art/proyecto-bigdata-scoring/blob/main/Power%20BI.png?raw=true" width="800">
 Visualización:
 
 
