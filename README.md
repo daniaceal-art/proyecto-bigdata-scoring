@@ -13,6 +13,7 @@ La disponibilidad de grandes volúmenes de datos transaccionales, demográficos,
 Diseñar e implementar una solución de Big Data en Databricks que permita analizar grandes volúmenes de información de clientes y predecir el riesgo de no pago, con el fin de optimizar los procesos de recuperación de cartera y mejorar los indicadores de morosidad.
 
 1.2 Objetivos específicos:
+
 •	Construir un modelo analítico que permita clasificar a los clientes según su nivel de riesgo de incumplimiento (bajo, medio, alto).scorin de cobranza si requerimos un modelo por l
 
 •	Integrar y procesar datos estructurados y no estructurados (histórico de pagos, transacciones, comportamiento de consumo, variables sociodemográficas).
@@ -29,12 +30,15 @@ Reducción de costos operativos
 Antes del modelo:
 
 •	Evaluaciones manuales de riesgo 
+
 •	Análisis reactivo de mora 
+
 •	Procesos repetitivos de seguimiento
 
 Con el Databricks:
 
 •	El análisis de riesgo se automatiza mediante Machine Learning
+
 •	Se reducen tiempos de análisis y carga operativa del equipo
 
 Esto implica una disminución significativa de costos operativos y mayor eficiencia en la gestión de clientes.
@@ -44,6 +48,7 @@ Así mismo el modelo  permite identificar clientes con alta probabilidad de incu
 Gracias a esto se pueden aplicar estrategias preventivas:
 
 •	Seguimiento temprano a clientes de alto riesgo lo cual reduce la cartera castigada y mejorar tasas de recuperación
+
 •	Priorización de acciones de cobranza
 
 La solución propuesta no solo optimiza el análisis de datos, sino que genera impacto financiero positivo al reducir pérdidas por incumplimiento y mejorar la eficiencia operativa.
@@ -53,24 +58,33 @@ La solución propuesta no solo optimiza el análisis de datos, sino que genera i
 Excel → Databricks Volume → Tabla Bronze → Tabla Silver→ Modelo Machine Learning → Tabla Gold → Databricks Job  → Dashboard Power BI
 
 Fuente de Datos:
+
 La base contiene información histórica de clientes con variables demográficas, financieras y de comportamiento de pago.
+
 Almacenamiento (Volumes):
+
 El archivo se carga en Databricks Volumes, que actúa como capa de almacenamiento en la nube.
 
 Bronze – Datos crudos:
+
 Se realiza la carga del archivo en una tabla con el objetivo de conservar la información original sin ningún tipo de transformación.
 
 Silver – Transformación:
+
 Se aplican procesos de calidad y preparación de los datos, como:
 
 • Limpieza de los nombres de las columnas
+
 • Conversión de los tipos de datos
+
 • Estandarización de las variables
+
 Los datos quedan listos para análisis y modelado.
 
 Machine Learning – Scoring de riesgo:
 
 Se entrena un modelo de regresión logística para estimar la probabilidad de que cada cliente incumpla sus obligaciones.
+
 Resultado generado:
 
 score_riesgo
@@ -92,12 +106,15 @@ Contiene:
 Esta tabla está lista para consumo analítico.
 
 Jobs:
+
 Automatización del pipeline
 
 Power Bi:
+
 La tabla Gold se conecta a Power BI para crear dashboards interactivos.
 
 El dashboard permite:
+
 •	Monitorear riesgo de cartera 
 
 •	Identificar clientes de alto riesgo 
@@ -114,6 +131,7 @@ La carga de datos se realiza utilizando notebooks en Databricks, los cuales perm
 Este proceso puede integrarse con Databricks Workflows, permitiendo programar ejecuciones automáticas y garantizando la actualización periódica de la información sin intervención manual.
 
 Estrategia Medallion:
+
 Se implementa una arquitectura en capas que organiza los datos según su nivel de procesamiento:
 
 Bronze-Datos crudos:
@@ -149,10 +167,13 @@ Propósito:
 • Apoyar la toma de decisiones mediante indicadores y score de riesgo
 
 Pipelines  y Workflows:
+
 El pipeline completo se automatiza mediante Databricks Workflows la ejecución de la arquitectura de datos, permitiendo procesar la información de forma continua desde su origen hasta la generación de valor para el negocio.
 
 # 5 MODELOS DE CIENCIA DE DATOS:
+
 Análisis descriptivo
+
 Se realizó exploración estadística de variables financieras y demográficas de los clientes, identificando variables clave relacionadas con el incumplimiento:
 
 •	Días en mora 
@@ -191,7 +212,9 @@ El linaje garantiza gobernanza, auditoría y control del ciclo de vida del dato 
 # 6 APP O VISUALIZACIÓN:
 Visualización:
 
+
 Se desarrolló un dashboard en Power BI para visualizar los resultados generados por el modelo.
+
 El dashboard permite:
 
 •	Analizar el score de riesgo de los clientes 
