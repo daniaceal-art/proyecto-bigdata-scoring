@@ -113,7 +113,16 @@ Jobs:
 
 Automatización del pipeline
 
+## Job Automatizado
+
+![Job](JOB.png)
+
+
 Power Bi:
+
+## Dashboard Power BI
+
+![Power BI](Power BI.png)
 
 La tabla Gold se conecta a Power BI para crear dashboards interactivos.
 
@@ -128,6 +137,11 @@ El dashboard permite:
 La arquitectura combina Big Data, Machine Learning y Business Intelligence en un flujo completo que permite analizar la información de principio a fin
 
 # 4 Pipeline De Ingesta De Datos:
+
+## Databricks
+
+![Databricks](Databricks.png)
+
 La información se obtiene desde un archivo Excel almacenado en Databricks Volumes y es procesada mediante notebooks que ejecutan cada una de las etapas del flujo de datos.
 
 Automatización de la ingesta:
@@ -200,6 +214,10 @@ Accuracy del modelo: 93.4%
 El modelo permite calcular la probabilidad de incumplimiento para cada cliente, generando un score de riesgo.
 
 # Lineage:
+
+## Lineage en Databricks
+
+![Lineage](Lineage.png)
 
 Se utilizó la funcionalidad Lineage Graph de Databricks Unity Catalog para validar la trazabilidad de los datos.
 
