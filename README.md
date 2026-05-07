@@ -4,7 +4,7 @@ Equipo de trabajo:
 Daniela Acevedo Álvarez-
 Juan Rafael Taborda
 
-# 1.	CASO DE NEGOCIO
+# 1.	Caso del negocio
    
 Descripción del Problema: Las entidades financieras presentan dificultades en la recuperación de cartera debido a la ausencia de capacidades analíticas avanzadas que permitan anticipar el riesgo de incumplimiento de los clientes. Actualmente, la gestión de cobranza se apoya en reglas estáticas y análisis descriptivo, lo que limita la capacidad de priorizar esfuerzos, incrementa la mora, reduce la tasa de recuperación y genera pérdidas económicas.
 La disponibilidad de grandes volúmenes de datos transaccionales, demográficos, comportamentales y de pagos no está siendo aprovechada de forma integral para predecir el comportamiento de pago y optimizar las estrategias de cobranza
