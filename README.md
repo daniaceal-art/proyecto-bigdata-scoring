@@ -4,7 +4,7 @@ Equipo de trabajo:
 Daniela Acevedo Álvarez-
 Juan Rafael Taborda
 
-# 1.	Caso del negocio
+# 1.	CASO DEL NEGOCIO
    
 Descripción del Problema: Las entidades financieras presentan dificultades en la recuperación de cartera debido a la ausencia de capacidades analíticas avanzadas que permitan anticipar el riesgo de incumplimiento de los clientes. Actualmente, la gestión de cobranza se apoya en reglas estáticas y análisis descriptivo, lo que limita la capacidad de priorizar esfuerzos, incrementa la mora, reduce la tasa de recuperación y genera pérdidas económicas.
 La disponibilidad de grandes volúmenes de datos transaccionales, demográficos, comportamentales y de pagos no está siendo aprovechada de forma integral para predecir el comportamiento de pago y optimizar las estrategias de cobranza
@@ -22,7 +22,7 @@ Diseñar e implementar una solución de Big Data en Databricks que permita anali
 
 Esta solución permitirá pasar de un enfoque reactivo a uno predictivo en la gestión de cartera.
 
-# 2.	Análisis económico
+# 2.	ANALISIS ECONOMICO 
 La implementación de un modelo de scoring predictivo de cobranza genera beneficios económicos directos en la gestión de cartera y permite una gestión anticipada del riesgo.
 
 Reducción de costos operativos
@@ -53,7 +53,7 @@ Gracias a esto se pueden aplicar estrategias preventivas:
 
 La solución propuesta no solo optimiza el análisis de datos, sino que genera impacto financiero positivo al reducir pérdidas por incumplimiento y mejorar la eficiencia operativa.
 
-# 3.Arquitectura Propuesta:
+# 3. ARQUITECTURA PROPUESTA
 
 ## Arquitectura del Proyecto
 
@@ -133,7 +133,7 @@ El dashboard permite:
 
 La arquitectura combina Big Data, Machine Learning y Business Intelligence en un flujo completo que permite analizar la información de principio a fin
 
-# 4 Pipeline De Ingesta De Datos:
+# 4 PIPELINE DE INGESA DE DATOS: 
 
 ## Databricks
 
@@ -217,14 +217,6 @@ El modelo permite calcular la probabilidad de incumplimiento para cada cliente, 
 ![Lineage](Lineage.png)
 
 Se utilizó la funcionalidad Lineage Graph de Databricks Unity Catalog para validar la trazabilidad de los datos.
-
-Notebook de ingestión y transformación (Pipeline_bigdata) 
-
-Tabla Bronze → bronze_clientes 
-
-Tabla Silver → silver_clientes 
-
-Tabla Gold → gold_scoring_clientes 
 
 El linaje garantiza gobernanza, auditoría y control del ciclo de vida del dato dentro de la arquitectura.
 
