@@ -14,8 +14,11 @@ Diseñar e implementar una solución de Big Data en Databricks que permita anali
 
 1.2 Objetivos específicos:
 •	Construir un modelo analítico que permita clasificar a los clientes según su nivel de riesgo de incumplimiento (bajo, medio, alto).scorin de cobranza si requerimos un modelo por l
+
 •	Integrar y procesar datos estructurados y no estructurados (histórico de pagos, transacciones, comportamiento de consumo, variables sociodemográficas).
+
 •	Optimizar las estrategias de cobranza, priorizando clientes de alto riesgo con acciones diferenciadas.
+
 Esta solución permitirá pasar de un enfoque reactivo a uno predictivo en la gestión de cartera.
 
 # 2.	Análisis económico
@@ -69,17 +72,26 @@ Machine Learning – Scoring de riesgo:
 
 Se entrena un modelo de regresión logística para estimar la probabilidad de que cada cliente incumpla sus obligaciones.
 Resultado generado:
+
 score_riesgo
+
 Gold-Datos para negocio:
+
 Se crea la tabla final:
+
 gold_scoring_clientes
+
 Contiene:
+
 •	Variables del cliente 
+
 •	Probabilidad de incumplimiento 
+
 •	Score de riesgo 
+
 Esta tabla está lista para consumo analítico.
 
-Jobs/Workflows:
+Jobs:
 Automatización del pipeline
 
 Power Bi:
@@ -87,8 +99,11 @@ La tabla Gold se conecta a Power BI para crear dashboards interactivos.
 
 El dashboard permite:
 •	Monitorear riesgo de cartera 
+
 •	Identificar clientes de alto riesgo 
+
 •	Analizar indicadores clave
+
 La arquitectura combina Big Data, Machine Learning y Business Intelligence en un flujo completo que permite analizar la información de principio a fin
 
 # 4 Pipeline De Ingesta De Datos:
@@ -102,23 +117,35 @@ Estrategia Medallion:
 Se implementa una arquitectura en capas que organiza los datos según su nivel de procesamiento:
 
 Bronze-Datos crudos:
+
 Se realiza la carga inicial del archivo Excel sin aplicar transformaciones.
+
 Tabla generada: bronze_clientes
 
 Silver-Transformación y enriquecimiento:
+
 Se aplican procesos de limpieza y preparación de los datos, tales como:
+
 • Renombramiento de columnas
+
 • Conversión de tipos de datos
+
 • Eliminación de valores o caracteres inválidos
+
 • Estandarización de la información
+
 Tabla generada: silver_clientes
 Propósito:
+
 • Garantizar calidad, consistencia y usabilidad de los datos
 
 Gold-Datos para negocio:
+
 Se consolidan los datos y se integran con el modelo de Machine Learning para generar el scoring de riesgo.
 Propósito:
+
 • Disponer de información lista para análisis
+
 • Apoyar la toma de decisiones mediante indicadores y score de riesgo
 
 Pipelines  y Workflows:
@@ -129,14 +156,18 @@ Análisis descriptivo
 Se realizó exploración estadística de variables financieras y demográficas de los clientes, identificando variables clave relacionadas con el incumplimiento:
 
 •	Días en mora 
+
 •	Cuotas en mora 
+
 •	Uso del cupo 
+
 •	Nivel de ingresos
 
 Se implementó un modelo de Regresión Logística para predecir la probabilidad de incumplimiento.
 El dataset fue dividido:
 
 •	80% entrenamiento 
+
 •	20% prueba 
 
 Resultado obtenido:
@@ -148,16 +179,23 @@ El modelo permite calcular la probabilidad de incumplimiento para cada cliente, 
 Se utilizó la funcionalidad Lineage Graph de Databricks Unity Catalog para validar la trazabilidad de los datos.
 
 Notebook de ingestión y transformación (Pipeline_bigdata) 
+
 Tabla Bronze → bronze_clientes 
+
 Tabla Silver → silver_clientes 
+
 Tabla Gold → gold_scoring_clientes 
+
 El linaje garantiza gobernanza, auditoría y control del ciclo de vida del dato dentro de la arquitectura.
 
 # 6 APP O VISUALIZACIÓN:
 Visualización:
+
 Se desarrolló un dashboard en Power BI para visualizar los resultados generados por el modelo.
 El dashboard permite:
+
 •	Analizar el score de riesgo de los clientes 
+
 •	Identificar segmentos con mayor probabilidad de incumplimiento 
 
 La visualización se alimenta de la tabla gold_scoring_clientes, que contiene la información consolidada y lista para análisis
