@@ -1,7 +1,7 @@
 # proyecto-bigdata-scoring
 
 Equipo de trabajo:
-Daniela Acevedo Álvarez
+Daniela Acevedo Álvarez-
 Juan Rafael Taborda
 
 # 1.	CASO DE NEGOCIO
