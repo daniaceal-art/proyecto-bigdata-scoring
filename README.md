@@ -55,9 +55,9 @@ La solución propuesta no solo optimiza el análisis de datos, sino que genera i
 
 # 3.Arquitectura Propuesta:
 
-## Arquitectura
+## Arquitectura del Proyecto
 
-![Arquitectura](arquitectura.png)
+![Arquitectura](Arquitectura.png)
 
 Excel → Databricks Volume → Tabla Bronze → Tabla Silver→ Modelo Machine Learning → Tabla Gold → Databricks Job  → Dashboard Power BI
 
